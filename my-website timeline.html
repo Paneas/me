@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panos Chrysanthopoulos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="left-half">
+        <img src="photo.jpg" alt="Panos">
+    </div>
+    <div class="right-half">
+        <section class="show">
+            <h1>Lead Developer | Cloud Architect | Freelancer</h1>
+            <h4>Hello there <i class="fa-regular fa-face-smile"></i>,</h4>
+            <p>Welcome to my page,</p>
+            <p>Whether you're here to hire me, stalk me, or just accidentally clicked the wrong link, I promise you'll
+                be curious to know more.</p>
+            <p>I am a experienced Lead Developer specializing in .NET and cloud-native solutions, with a passion for
+                architecting scalable, high-performance software.
+                My expertises lies in designing microservices-based applications, optimizing system efficiency, and
+                leading agile teams to deliver cutting-edge solutions.
+                Adept at implementing DevOps best practices, streamlining CI/CD pipelines, and driving innovation
+                through technology.
+                A results-driven leader who seamlessly aligns business objectives with technical strategies, ensuring
+                impactful and efficient solutions in fast-paced environments.</p>
+            <p>Feel free to contact me for freelancing opportunities, bringing my expertise in software architecture,
+                cloud solutions, and agile development to businesses
+                looking for scalable and high-quality technology solutions.</p>
+            <h4>Let’s collaborate to build something exceptional!<i class="fas fa-rocket"></i></h4>
+        </section>
+        <section class="hidden">
+            <h3>Experience</h3>
+            <div class="timeline">
+                <div class="container left">
+                    <div class="content">
+                        <h4>Lead Developer - Interworks</h4>
+                        <p class="timeline-date">January 2025 - Now</p>
+                        <ul>
+                            <li>Make decisions on architecture, technologies, and best practices.</li>
+                            <li>Help define project scope, timelines, and deliverables.</li>
+                            <li>Review code to ensure quality, maintainability, and adherence to standards.</li>
+                            <li>Mentor and guide developers, fostering a collaborative environment.</li>
+                            <li>Encourage the team to learn, grow, and adopt new technologies or practices.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container right">
+                    <div class="content">
+                        <h4>Senior Developer - NextDriver</h4>
+                        <p class="timeline-date">April 2021 - December 2024</p>
+                        <ul>
+                            <li>Lead and mentor a team of developers, providing guidance, feedback, and support.
+                            </li>
+                            <li>Managed project planning, resource allocation, and task prioritization to ensure
+                                timely
+                                project completion.</li>
+                            <li>Facilitated regular team meetings, sprint planning sessions, and retrospectives in
+                                an
+                                Agile/Scrum environment.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container left">
+                    <div class="content">
+                        <h4>Software Developer - Data Communication</h4>
+                        <p class="timeline-date">March 2018 – April 2021</p>
+                        <ul>
+                            <li>Designed and implemented MS Dynamics CRM solutions.</li>
+                            <li>Developed enterprise-grade API integration layer and web applications using .NET
+                                technologies.</li>
+                            <li>Worked with SQL Server, ASP.NET, and SSRS to enhance system efficiency and
+                                reporting.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container right">
+                    <div class="content">
+                        <h4>IT Assistant - Thalatta Seaside Hotel</h4>
+                        <p class="timeline-date">April 2017 – Sept. 2017</p>
+                        <ul>
+                            <li>Maintained network infrastructure and provided IT support.</li>
+                            <li>Managed general IT service requests and ensured customer support
+                                satisfaction.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hidden">
+            <h3>Contact Me</h3>
+            <div class="contact-icons">
+                <a href="https://www.linkedin.com/in/paneas/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:your-email@example.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </section>
+        <div class="scroll-indicator">↓ Scroll to explore</div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll("section, .container");
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+
+</html>
