@@ -1,9 +1,10 @@
 // Typing effect for landing section
 const titles = [
-    "Lead Developer",
+    "Lead Software Engineer",
     "Microservices & API Architect",
     "Tech Team Mentor",
     "Cloud Native Solutions",
+    "AI & ML Enthusiast",
     "Freelancer"
 ];
 let titleIndex = 0, charIndex = 0, isDeleting = false;
