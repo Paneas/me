@@ -34,7 +34,40 @@ function type() {
         }
     }
 }
+
+// Theme Toggle
+function initTheme() {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+}
+
+function updateThemeIcon(theme) {
+    const icon = document.querySelector('#theme-toggle i');
+    if (icon) {
+        icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    }
+}
+
+function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeIcon(newTheme);
+}
+
 window.addEventListener('DOMContentLoaded', () => {
+    // Initialize theme
+    initTheme();
+
+    // Theme toggle button
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', toggleTheme);
+    }
+
+    // Start typing animation
     setTimeout(type, 600);
 });
 
@@ -73,6 +106,23 @@ window.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.2 });
     sections.forEach(section => {
         observer.observe(section);
+    });
+
+    // Timeline cards animation
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    const timelineObserver = new IntersectionObserver(entries => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, index * 100);
+                timelineObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+
+    timelineItems.forEach(item => {
+        timelineObserver.observe(item);
     });
 
     // Scroll-down indicator click/scroll triggers next section
