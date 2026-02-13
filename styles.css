@@ -169,6 +169,7 @@ main {
     cursor: pointer;
     display: inline-block;
     backdrop-filter: blur(8px);
+    position: relative;
 }
 
 .skill-badge:hover {
@@ -176,6 +177,50 @@ main {
     border-color: var(--primary);
     transform: scale(1.02) translateY(-2px);
     box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+}
+
+.skill-badge[data-source]::after {
+    content: attr(data-source);
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%) translateY(-4px);
+    background: var(--surface-elevated);
+    color: var(--text-secondary);
+    padding: 0.5em 0.9em;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 400;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--card-border);
+    z-index: 10;
+}
+
+.skill-badge[data-source]:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.skill-badge[data-source]::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 2px);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: var(--surface-elevated);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 10;
+}
+
+.skill-badge[data-source]:hover::before {
+    opacity: 1;
 }
 
 .timeline {
