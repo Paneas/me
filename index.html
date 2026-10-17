@@ -4,23 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panos C</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Panos Chrysanthopoulos · Tech Lead</title>
     <meta name="description"
-        content="Panos Chrysanthopoulos - Lead .NET Developer, Cloud Architect, and Technical Team Leader. Specializing in .NET, C#, Azure, Microservices, API Design, and modern cloud-native solutions. Available for leadership, consulting, and engineering roles.">
-    <meta name="keywords"
-        content=".NET, C#, Lead Developer, Cloud Architect, Azure, Microservices, API, Technical Leader, Software Engineer, Panos Chrysanthopoulos, Senior .NET, DevOps, Entity Framework, Docker, Kubernetes, Team Mentor, Digital Transformation, Greece, Europe, Remote, Software Architecture, CI/CD, Agile, SQL, MS Dynamics CRM, RESTful APIs, SSRS, Software Development, Tech Lead, Engineering Manager, Cloud Solutions, Full Stack, Backend, Software Consultant, Technology, IT, Programming, Developer Portfolio, Resume, CV">
+        content="Panos Chrysanthopoulos, Tech Lead at Infiterra. Leads a team of seven engineers building event-driven vendor integrations in .NET for a subscription-commerce SaaS platform.">
     <meta name="author" content="Panos Chrysanthopoulos">
-    <link rel="canonical" href="https://paneas.github.io/website/"">
+    <link rel="canonical" href="https://paneas.github.io/website/">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
     <!-- Open Graph for social sharing -->
-    <meta property=" og:title" content="Panos Chrysanthopoulos | Lead .NET Developer & Cloud Architect">
+    <meta property="og:title" content="Panos Chrysanthopoulos · Tech Lead, Backend Systems">
     <meta property="og:description"
-        content="Lead .NET Developer, Cloud Architect, and Technical Team Leader. Specializing in .NET, Azure, Microservices, and modern cloud-native solutions.">
+        content="Tech Lead at Infiterra. Event-driven .NET systems, vendor integrations and engineering leadership.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://paneas.github.io/website/">
+    <meta property="og:image" content="https://paneas.github.io/website/photo.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Apply saved theme before paint to avoid a flash -->
+    <script>
+        try {
+            const t = localStorage.getItem('theme');
+            if (t) document.documentElement.setAttribute('data-theme', t);
+        } catch (e) { }
+        document.documentElement.classList.add('js');
+    </script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KFQ9W79RRF"></script>
     <script>
@@ -30,173 +43,322 @@
 
         gtag('config', 'G-KFQ9W79RRF');
     </script>
-
 </head>
 
 <body>
-    <!-- Theme Toggle Button -->
-    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-        <i class="fas fa-sun"></i>
-    </button>
+    <!-- SVG icon sprite -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <symbol id="i-linkedin" viewBox="0 0 24 24">
+            <path fill="currentColor"
+                d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z" />
+        </symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                d="M3 6.5h18v11H3zM3.5 7l8.5 6.5L20.5 7" />
+        </symbol>
+        <symbol id="i-sun" viewBox="0 0 24 24">
+            <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                <circle cx="12" cy="12" r="4" />
+                <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+            </g>
+        </symbol>
+        <symbol id="i-moon" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"
+                d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5Z" />
+        </symbol>
+    </svg>
 
-    <main>
-        <!-- Landing/Intro Section -->
-        <section id="home" class="section landing">
-            <div class="intro">
-                <h1>
-                    <span id="typed-text"></span><span class="cursor">|</span>
-                </h1>
-                <p class="subtitle" style="padding-left: 2px;">Hello there! Explore my journey in tech and leadership.
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main">
+            <a href="#top" class="brand" aria-label="Back to top">PC</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">
+                <svg class="icon icon-sun"><use href="#i-sun" /></svg>
+                <svg class="icon icon-moon"><use href="#i-moon" /></svg>
+            </button>
+        </nav>
+    </header>
+
+    <main id="top">
+        <!-- Hero -->
+        <section class="hero container">
+            <div class="hero-text">
+                <p class="eyebrow">Aigio, Greece · Remote · EU citizen</p>
+                <h1>Panos Chrysanthopoulos</h1>
+                <p class="headline">Tech Lead · Backend Systems · Engineering Leadership</p>
+                <p class="lead">
+                    Tech Lead at Infiterra, heading a team of seven engineers that integrates third-party vendors
+                    into a subscription-commerce SaaS platform. I balance owning the architecture and writing code
+                    with hiring, mentoring and shaping scope alongside product, so work ships in small increments.
                 </p>
+                <div class="cta">
+                    <a class="btn btn-primary" href="https://www.linkedin.com/in/paneas/" target="_blank"
+                        rel="noopener">
+                        <svg class="icon"><use href="#i-linkedin" /></svg> Connect on LinkedIn
+                    </a>
+                    <a class="btn btn-ghost" href="mailto:paneas.chrys@gmail.com">
+                        <svg class="icon"><use href="#i-mail" /></svg> Email me
+                    </a>
+                </div>
             </div>
-            <div class="scroll-down-indicator">
-                <span class="arrow"></span>
+            <img src="photo.jpg" alt="Portrait of Panos Chrysanthopoulos" class="portrait" width="320" height="320">
+        </section>
+
+        <!-- Key facts -->
+        <section class="facts container" aria-label="At a glance">
+            <div class="fact reveal"><strong>8+</strong><span>years building commercial software</span></div>
+            <div class="fact reveal"><strong>7</strong><span>engineers hired and led</span></div>
+            <div class="fact reveal"><strong>~1M</strong><span>records a day ingested from a dozen providers</span></div>
+            <div class="fact reveal"><strong>5+</strong><span>years of event-driven systems</span></div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="section container">
+            <h2 class="reveal">What I do</h2>
+            <div class="pillars">
+                <article class="pillar reveal">
+                    <h3>Architecture, end to end</h3>
+                    <p>
+                        Own solution design from shaping a feature with stakeholders to running it in production.
+                        Led a subscription-commerce platform's move from a monolith to independently deployable
+                        services, giving teams real ownership and faster releases.
+                    </p>
+                </article>
+                <article class="pillar reveal">
+                    <h3>Systems that stay correct</h3>
+                    <p>
+                        Design distributed, event-driven integrations that keep working when networks fail and
+                        messages repeat: outbox/inbox patterns, idempotent handlers, and observability with
+                        defined SLOs.
+                    </p>
+                </article>
+                <article class="pillar reveal">
+                    <h3>Teams that grow</h3>
+                    <p>
+                        Hire, mentor and review. Set the technical interview bar, run 1:1s and design reviews, and
+                        led the team's shift to AI coding agents, now part of how it designs, builds and reviews
+                        software.
+                    </p>
+                </article>
             </div>
         </section>
-        <!-- About Me Section -->
-        <section id="about" class="section about">
-            <div class="about-content">
-                <img src="photo.jpg" alt="Profile Photo" class="profile-photo">
-                <div>
-                    <h2>About Me</h2>
-                    <p>
-                        👋 Hi! I'm Panos, a Lead .NET Developer and cloud solutions architect with a strong background
-                        in
-                        building scalable, maintainable enterprise systems.
-                    </p>
-                    <p>
-                        I specialize in designing and implementing robust .NET applications, leading technical teams,
-                        and driving digital transformation through modern cloud-native architectures. My experience
-                        spans microservices, API design, and DevOps, with a strong emphasis on setting direction,
-                        enabling teams, and mentoring engineers to do their best work. I also focus on where AI can
-                        realistically improve products and engineering workflows.
-                    </p>
-                    <p>
-                        I am passionate about delivering high-quality solutions that align with business goals, and I
-                        thrive in collaborative, agile environments. My approach is hands-on, detail-oriented, and
-                        focused on continuous improvement. As a leader, I prioritize clear communication, ownership,
-                        and sustainable delivery, using AI-assisted development thoughtfully when it clearly adds value.
-                    </p>
-                    <p>
-                        If you're looking for a technical leader who can bridge the gap between business and technology,
-                        let's connect. I am always open to new opportunities and challenges that allow me to grow and
-                        make a positive impact.
-                        <i class="fas fa-rocket" style="color:#b97a57;"></i>
-                    </p>
+
+        <!-- Experience -->
+        <section id="experience" class="section container">
+            <h2 class="reveal">Experience</h2>
+
+            <article class="role reveal">
+                <div class="role-meta">
+                    <span class="role-dates">Dec 2024 – Present</span>
+                    <span class="role-company">Infiterra</span>
+                </div>
+                <div class="role-body">
+                    <h3>Lead Software Engineer</h3>
+                    <p class="role-context">Subscription-commerce SaaS · Tech Lead, Service Management team</p>
+                    <ul>
+                        <li><b>Technical leadership.</b> Own platform architecture, technology choices and coding
+                            standards; run design reviews; set the bar for CI/CD, automated testing, secure coding and
+                            code quality.</li>
+                        <li><b>Vendor integrations.</b> Lead the team that integrates third-party vendors such as
+                            Adobe, Google, AWS and Dropbox into the Infiterra platform, owning the full integration
+                            lifecycle with each vendor delivered as microservices connected through RabbitMQ events
+                            and REST webhooks.</li>
+                        <li><b>Team leadership.</b> Hired and lead a team of 7 engineers, set the technical interview
+                            bar, and grow engineers through regular 1:1s, feedback, and code and design reviews.</li>
+                        <li><b>Monolith to microservices.</b> Led the decomposition of a monolith into independently
+                            deployable .NET services along DDD bounded contexts, with CQRS and anti-corruption layers
+                            isolating legacy models. Significantly cut deployment cycle time.</li>
+                        <li><b>Reliable messaging.</b> Built outbox/inbox patterns and idempotent message handlers so
+                            retries and redeliveries never duplicate business effects.</li>
+                        <li><b>AI-first development.</b> Led the team's adoption of LLM coding agents (Claude Code):
+                            set conventions and guardrails for agent-generated code, coached engineers, and built
+                            agents into implementation, refactoring and review.</li>
+                        <li><b>Product partnership.</b> Shape scope and priorities with product managers and business
+                            stakeholders, pairing requirements with solution design and trade-offs.</li>
+                    </ul>
+                    <ul class="stack" aria-label="Tech used">
+                        <li>.NET / C#</li><li>ASP.NET Core</li><li>EF Core</li><li>SQL Server</li><li>RabbitMQ</li>
+                        <li>Docker</li><li>Kubernetes</li><li>Azure</li><li>Application Insights</li>
+                        <li>Azure DevOps</li><li>Claude Code</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="role reveal">
+                <div class="role-meta">
+                    <span class="role-dates">Apr 2021 – Dec 2024</span>
+                    <span class="role-company">NextDriver</span>
+                </div>
+                <div class="role-body">
+                    <h3>Senior Developer</h3>
+                    <ul>
+                        <li><b>Data ingestion pipeline.</b> Designed and built event-driven microservices that ingest
+                            data from a dozen external providers (close to 1 million records per day), normalise it
+                            and index it into Elasticsearch, decoupled through Azure Service Bus.</li>
+                        <li><b>Search performance.</b> Drove adoption of Elasticsearch for the ingested provider data,
+                            replacing costly legacy SQL queries and speeding up key user-facing features.</li>
+                        <li><b>Real-time notifications.</b> Built SignalR notifications that push backend events to
+                            users as they happen.</li>
+                        <li><b>Scaling.</b> Led efforts to reduce latency and scale backend systems and databases
+                            through rapid user growth and traffic spikes.</li>
+                        <li><b>Delivery.</b> Owned deployments and CI/CD for safe, automated rollouts; led code and
+                            design reviews and root-cause analysis on production issues.</li>
+                    </ul>
+                    <ul class="stack" aria-label="Tech used">
+                        <li>.NET / C#</li><li>ASP.NET Core</li><li>SQL Server</li><li>Azure Service Bus</li>
+                        <li>Azure Event Hubs</li><li>Elasticsearch</li><li>SignalR</li><li>OAuth / JWT</li>
+                        <li>Kubernetes (AKS)</li><li>GitLab CI/CD</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="role reveal">
+                <div class="role-meta">
+                    <span class="role-dates">Mar 2018 – Apr 2021</span>
+                    <span class="role-company">Data Communication</span>
+                </div>
+                <div class="role-body">
+                    <h3>Software Developer</h3>
+                    <ul>
+                        <li><b>CRM integrations.</b> Delivered enterprise MS Dynamics CRM customisations and RESTful
+                            integration layers to third-party systems, gathering requirements directly with business
+                            stakeholders.</li>
+                        <li><b>Internal tools.</b> Built internal web applications and SSRS reporting that improved
+                            business visibility and operational workflows.</li>
+                    </ul>
+                    <ul class="stack" aria-label="Tech used">
+                        <li>.NET / C#</li><li>ASP.NET</li><li>Entity Framework</li><li>SQL Server</li>
+                        <li>MS Dynamics CRM</li><li>SSRS</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="role role-minor reveal">
+                <div class="role-meta">
+                    <span class="role-dates">Apr 2017 – Sep 2017</span>
+                    <span class="role-company">Thalatta Seaside Hotel</span>
+                </div>
+                <div class="role-body">
+                    <h3>IT Assistant</h3>
+                    <p>Maintained network infrastructure and handled IT support and service requests.</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="section container">
+            <h2 class="reveal">Skills</h2>
+            <p class="section-note reveal">Hover a skill to see where I used it.</p>
+            <div class="skill-groups">
+                <div class="skill-group reveal">
+                    <h3>Languages &amp; frameworks</h3>
+                    <ul class="chips">
+                        <li data-source="All roles">.NET / C#</li>
+                        <li data-source="NextDriver, Infiterra">ASP.NET Core / Web API</li>
+                        <li data-source="All roles">Entity Framework / EF Core</li>
+                        <li data-source="NextDriver">SignalR</li>
+                    </ul>
+                </div>
+                <div class="skill-group reveal">
+                    <h3>Messaging &amp; architecture</h3>
+                    <ul class="chips">
+                        <li data-source="NextDriver, Infiterra">Event-driven systems</li>
+                        <li data-source="NextDriver, Infiterra">Microservices</li>
+                        <li data-source="Infiterra">RabbitMQ</li>
+                        <li data-source="NextDriver">Azure Service Bus</li>
+                        <li data-source="NextDriver">Azure Event Hubs (Kafka protocol)</li>
+                        <li data-source="Infiterra">Outbox / inbox &amp; idempotency</li>
+                        <li data-source="Infiterra">DDD &amp; CQRS</li>
+                        <li data-source="All roles">REST APIs &amp; webhooks</li>
+                        <li data-source="NextDriver, Infiterra">OAuth / JWT</li>
+                    </ul>
+                </div>
+                <div class="skill-group reveal">
+                    <h3>Data</h3>
+                    <ul class="chips">
+                        <li data-source="All roles">SQL Server</li>
+                        <li data-source="NextDriver">Elasticsearch</li>
+                        <li data-source="Data Communication">SSRS</li>
+                    </ul>
+                </div>
+                <div class="skill-group reveal">
+                    <h3>Cloud &amp; DevOps</h3>
+                    <ul class="chips">
+                        <li data-source="NextDriver, Infiterra">Microsoft Azure</li>
+                        <li data-source="NextDriver, Infiterra">Docker</li>
+                        <li data-source="NextDriver, Infiterra">Kubernetes / AKS</li>
+                        <li data-source="Infiterra">Azure DevOps</li>
+                        <li data-source="NextDriver">GitLab CI/CD</li>
+                        <li data-source="NextDriver, Infiterra">GitHub Actions</li>
+                        <li data-source="Infiterra">Application Insights &amp; SLOs</li>
+                        <li data-source="Infiterra">xUnit, NUnit, Testcontainers</li>
+                    </ul>
+                </div>
+                <div class="skill-group reveal">
+                    <h3>AI-first engineering</h3>
+                    <ul class="chips">
+                        <li data-source="Infiterra">Claude Code &amp; coding agents</li>
+                        <li data-source="Infiterra">Agent-ready codebases</li>
+                        <li data-source="Infiterra">LLM integrations</li>
+                        <li data-source="Infiterra">Prompt engineering</li>
+                    </ul>
+                </div>
+                <div class="skill-group reveal">
+                    <h3>Leadership &amp; delivery</h3>
+                    <ul class="chips">
+                        <li data-source="Infiterra">Hiring &amp; interviewing</li>
+                        <li data-source="NextDriver, Infiterra">Mentoring</li>
+                        <li data-source="NextDriver, Infiterra">Code &amp; design reviews</li>
+                        <li data-source="Infiterra">Design docs, ADRs, runbooks</li>
+                        <li data-source="NextDriver, Infiterra">Root-cause analysis</li>
+                        <li data-source="All roles">Agile / Scrum</li>
+                    </ul>
                 </div>
             </div>
         </section>
-        <!-- Experience Section -->
-        <section id="experience" class="section experience">
-            <h2>Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-point"></div>
-                    <div class="timeline-content">
-                        <h3>Lead Developer - Infiterra</h3>
-                        <span class="timeline-date">Jan 2025 - Now</span>
-                        <ul>
-                            <li>Define architecture, select technologies, and enforce best practices across the stack.
-                            </li>
-                            <li>Drive project execution, aligning technical solutions with business requirements.</li>
-                            <li>Ensure code quality, scalability, and maintainability through reviews, CI/CD, and
-                                automation</li>
-                            <li>Apply AI-assisted development tools and integrate LLM-based capabilities where relevant.
-                            </li>
-                            <li>Mentor engineers and promote adoption of modern technologies and practices.</li>
-                        </ul>
-                    </div>
+
+        <!-- Education -->
+        <section id="education" class="section container">
+            <h2 class="reveal">Education</h2>
+            <article class="role reveal">
+                <div class="role-meta">
+                    <span class="role-dates">2015</span>
+                    <span class="role-company">University of Thessaly</span>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-point"></div>
-                    <div class="timeline-content">
-                        <h3>Senior Developer - NextDriver</h3>
-                        <span class="timeline-date">Apr 2021 - Dec 2024</span>
-                        <ul>
-                            <li>Led efforts to improve performance and reduce latency as user numbers increased.</li>
-                            <li>Managed project planning, resource allocation, and task prioritization to ensure timely
-                                project completion.</li>
-                            <li>Owned deployments and CI/CD workflows, ensuring safe, automated rollouts.</li>
-                            <li>Scaled backend systems and databases to handle rapid user growth and traffic spikes.
-                            </li>
-                        </ul>
-                    </div>
+                <div class="role-body">
+                    <h3>BSc in Computer Science and Biomedical Informatics</h3>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-point"></div>
-                    <div class="timeline-content">
-                        <h3>Software Developer - Data Communication</h3>
-                        <span class="timeline-date">Mar 2018 – Apr 2021</span>
-                        <ul>
-                            <li>Designed and implemented MS Dynamics CRM solutions.</li>
-                            <li>Developed enterprise-grade API integration layer and web applications using .NET
-                                technologies.</li>
-                            <li>Worked with SQL Server, ASP.NET, and SSRS to enhance system efficiency and reporting.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-point"></div>
-                    <div class="timeline-content">
-                        <h3>IT Assistant - Thalatta Seaside Hotel</h3>
-                        <span class="timeline-date">Apr 2017 – Sept 2017</span>
-                        <ul>
-                            <li>Maintained network infrastructure and provided IT support.</li>
-                            <li>Managed general IT service requests and ensured customer support satisfaction.</li>
-                        </ul>
-                    </div>
+            </article>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section container">
+            <div class="contact-card reveal">
+                <h2>Let's talk</h2>
+                <p>Open to Tech Lead and senior backend roles, remote or anywhere in the EU, no sponsorship needed.</p>
+                <div class="cta">
+                    <a class="btn btn-primary" href="https://www.linkedin.com/in/paneas/" target="_blank"
+                        rel="noopener">
+                        <svg class="icon"><use href="#i-linkedin" /></svg> LinkedIn
+                    </a>
+                    <a class="btn btn-ghost" href="mailto:paneas.chrys@gmail.com">
+                        <svg class="icon"><use href="#i-mail" /></svg> paneas.chrys@gmail.com
+                    </a>
                 </div>
             </div>
-        </section>
-        <!-- Skills Section -->
-        <section id="skills" class="section skills">
-            <h2>Skills</h2>
-            <div class="skills-list">
-                <span class="skill-badge" data-source="All roles">.NET</span>
-                <span class="skill-badge" data-source="All roles">C#</span>
-                <span class="skill-badge" data-source="NextDriver, Infiterra">ASP.NET Core</span>
-                <span class="skill-badge" data-source="All roles">Entity Framework</span>
-                <span class="skill-badge" data-source="NextDriver, Infiterra">Microservices</span>
-                <span class="skill-badge" data-source="NextDriver, Infiterra">RESTful APIs</span>
-                <span class="skill-badge" data-source="NextDriver, Infiterra">Azure</span>
-                <span class="skill-badge" data-source="NextDriver, Infiterra">CI/CD</span>
-                <span class="skill-badge" data-source="NextDriver, Infiterra">Docker</span>
-                <span class="skill-badge" data-source="NextDriver, Infiterra">Kubernetes</span>
-                <span class="skill-badge" data-source="Data Communication">MS Dynamics CRM</span>
-                <span class="skill-badge" data-source="All roles">SQL</span>
-                <span class="skill-badge" data-source="NextDriver, Infiterra">API Design</span>
-                <span class="skill-badge" data-source="NextDriver, Infiterra">Cloud Native</span>
-                <span class="skill-badge" data-source="NextDriver, Infiterra">SignalR</span>
-                <span class="skill-badge" data-source="NextDriver, Infiterra">Message Queues</span>
-                <span class="skill-badge" data-source="NextDriver, Infiterra">RabbitMQ</span>
-                <span class="skill-badge" data-source="NextDriver, Infiterra">Azure Service Bus</span>
-                <span class="skill-badge" data-source="NextDriver, Infiterra">OAuth / JWT</span>
-                <span class="skill-badge" data-source="Infiterra">AI-Assisted Development</span>
-                <span class="skill-badge" data-source="Infiterra">LLM Integrations</span>
-                <span class="skill-badge" data-source="Infiterra">Prompt Engineering</span>
-                <span class="skill-badge" data-source="Infiterra, NextDriver">Mentoring</span>
-                <span class="skill-badge" data-source="All roles">Agile/Scrum</span>
-                <!-- Soft skills -->
-                <span class="skill-badge" data-source="Infiterra, NextDriver">Code Review</span>
-                <span class="skill-badge" data-source="Infiterra, NextDriver">Team Leadership</span>
-                <span class="skill-badge" data-source="All roles">Problem Solving</span>
-                <span class="skill-badge" data-source="All roles">Communication</span>
-                <span class="skill-badge" data-source="All roles">Collaboration</span>
-                <span class="skill-badge" data-source="All roles">Adaptability</span>
-                <span class="skill-badge" data-source="All roles">Critical Thinking</span>
-            </div>
-        </section>
-        <!-- Connect Section -->
-        <section id="connect" class="section contact">
-            <h2>Connect</h2>
-            <a href="https://www.linkedin.com/in/paneas/" target="_blank" class="linkedin-btn" aria-label="LinkedIn">
-                <i class="fab fa-linkedin" style="font-size:1.5em;vertical-align:middle;margin-right:0.5em;"></i>
-                <span style="vertical-align:middle;font-weight:600;letter-spacing:0.02em;">Let's connect on
-                    LinkedIn</span>
-            </a>
         </section>
     </main>
+
+    <footer class="site-footer container">
+        <span>© <span id="year">2026</span> Panos Chrysanthopoulos</span>
+        <span>Greek (native) · English</span>
+    </footer>
+
     <script src="main.js"></script>
 </body>
 
